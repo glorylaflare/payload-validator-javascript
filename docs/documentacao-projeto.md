@@ -37,9 +37,9 @@ export const VALIDATION_TYPES = {
   REQUIRED: 'required',
   EMAIL: 'email',
   MIN_LENGTH: 'minLength',
-}
+};
 
-export const ALLOWED_DOMAINS = ['gmail.com', 'outlook.com']
+export const ALLOWED_DOMAINS = ['gmail.com', 'outlook.com'];
 ```
 
 ---
@@ -92,8 +92,8 @@ export const ALLOWED_DOMAINS = ['gmail.com', 'outlook.com']
 **Exemplo:**
 
 ```js
-export { validatePayload } from './core/validator.js'
-export { userRules } from './rules/user.js'
+export { validatePayload } from './core/validator.js';
+export { userRules } from './rules/user.js';
 ```
 
 ---
@@ -130,7 +130,7 @@ export const userRules = {
   email: [required, email],
   password: [required, minLength(8), hasSpecialChar],
   cpf: [required, cpfValidator],
-}
+};
 ```
 
 ---
@@ -181,13 +181,13 @@ export function isValidCPF(cpf) {
 **Exemplos de uso:**
 
 ```js
-import { required, minLength, regex } from './validators/common'
+import { required, minLength, regex } from './validators/common';
 
 const passwordValidators = [
   required,
   minLength(8),
   regex(/^(?=.*[A-Za-z])(?=.*\d)/),
-]
+];
 ```
 
 ---
@@ -203,16 +203,16 @@ const passwordValidators = [
 ## 🚀 Como Usar
 
 ```js
-import { validatePayload } from 'payload-validator-js'
-import { userRules } from './rules/user.js'
+import { validatePayload } from 'payload-validator-js';
+import { userRules } from './rules/user.js';
 
-const payload = { name: 'João', email: 'joao@email.com' }
-const result = validatePayload(payload, userRules)
+const payload = { name: 'João', email: 'joao@email.com' };
+const result = validatePayload(payload, userRules);
 
 if (result.isValid) {
-  console.log('Payload válido!')
+  console.log('Payload válido!');
 } else {
-  console.log('Erros encontrados:', result.errors)
+  console.log('Erros encontrados:', result.errors);
 }
 ```
 
