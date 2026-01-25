@@ -1,6 +1,6 @@
-import js from '@eslint/js';
-import globals from 'globals';
-import prettier from 'eslint-plugin-prettier';
+import js from '@eslint/js'
+import globals from 'globals'
+import prettier from 'eslint-plugin-prettier'
 
 export default [
   {
@@ -14,9 +14,9 @@ export default [
     rules: {
       'no-unused-vars': 'error',
       'no-console': 'warn',
-      'eqeqeq': 'error',
-      'curly': 'error',
+      eqeqeq: 'error',
+      curly: 'error',
       'prettier/prettier': 'error',
     },
   },
-];
+]

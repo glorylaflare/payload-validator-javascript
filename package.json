@@ -10,7 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "build": "npm run lint && npm run format",
+    "ci": "npm run build && npm test"
   },
   "lint-staged": {
     "*.js": [
