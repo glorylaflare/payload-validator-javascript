@@ -1,8 +1,4 @@
 const ageValidator = (age) => {
-  if (age === null || age === undefined) {
-    return false;
-  }
-
   if (typeof age !== 'number') {
     return false;
   }
