@@ -1,5 +1,5 @@
 const confirmPasswordValidator = (password, confirmPassword) => {
-  if (typeof password !== 'string' || typeof confirmPassword !== 'string') {
+  if (typeof confirmPassword !== 'string') {
     return false;
   }
 
