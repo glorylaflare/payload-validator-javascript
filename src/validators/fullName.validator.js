@@ -1,4 +1,5 @@
-const fullNameValidator = (name) => {
+const fullNameValidator = (name) => { 
+    // nome: Marcelo Gonçalves de Oliveira Júnior
     // Verifica se o nome é uma string
     if (typeof name !== 'string') {
         return false;
@@ -12,13 +13,12 @@ const fullNameValidator = (name) => {
     }
 
     // Verifica se o nome está vazio ou contém apenas espaços
-    parts.forEach(part => {
+    for (const part of parts) {
         if (part.length < 2 || !/^[A-Za-z]+$/.test(part)) {
             return false;
         }
-        return true;
-    })
-
+    }
+    
     return true;
 };
 
