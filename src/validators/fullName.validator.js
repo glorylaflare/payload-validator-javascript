@@ -1,9 +1,4 @@
 const fullNameValidator = (name) => {
-    // Verifica se o nome veio nulo ou indefinido
-    if (name === undefined || name === null) {
-        return false;
-    };
-
     // Verifica se o nome é uma string
     if (typeof name !== 'string') {
         return false;
