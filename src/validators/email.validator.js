@@ -5,15 +5,15 @@ const emailValidator = (email) => {
     return false;
   }
 
-  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (!emailValid.test(email)) {
+  if (!emailPattern.test(email)) {
     return false;
   }
 
-  const domain = email.trim().split('@')[1];
+  const domain = email.split('@')[1];
 
-  for (const item in BLACKLIST_EMAIL) {
+  for (const item of BLACKLIST_EMAIL) {
     if (item === domain) {
       return false;
     }
