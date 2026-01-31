@@ -1,2 +1,7 @@
-console.log('🚀 Payload Validator JS iniciado!');
-console.log('📚 Consulte a documentação em src/docs/documentacao-projeto.md');
+import { validate } from './validators/index.js';
+import { rules } from './rules/payload.rules.js';
+import payload from './payloads/payload.json';
+
+const result = validate(payload, rules);
+
+console.log(JSON.stringify(result, null, 2));
