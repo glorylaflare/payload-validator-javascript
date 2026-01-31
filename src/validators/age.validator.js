@@ -7,7 +7,7 @@ const ageValidator = (age) => {
     return false;
   }
 
-  if (age < 18 && age > 120) {
+  if (age < 18 || age > 120) {
     return false;
   }
 
