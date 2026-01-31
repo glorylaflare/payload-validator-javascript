@@ -14,8 +14,8 @@ export default [
     rules: {
       'no-unused-vars': 'error',
       'no-console': 'warn',
-      'eqeqeq': 'error',
-      'curly': 'error',
+      eqeqeq: 'error',
+      curly: 'error',
       'no-var': 'error',
       'prefer-const': 'error',
       'no-multiple-empty-lines': ['error', { max: 1 }],
